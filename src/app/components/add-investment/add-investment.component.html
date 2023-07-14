@@ -1,0 +1,130 @@
+<div class="myForm container">
+
+
+    <h1 class="text-h1">Novo Investimento</h1>
+ 
+<div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="type">Type</label>
+        <input
+          type="text"
+          class="form-control"
+          id="type"
+          required
+          [(ngModel)]="investment.type"
+          name="type"
+        />
+      </div>
+      
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="investment.description"
+          name="description"
+        />
+      </div>
+
+
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input
+          class="form-control"
+          id="status"
+          required
+          [(ngModel)]="investment.status"
+          name="status"
+        />
+      </div>
+
+
+
+      <div class="form-group">
+        <label for="value">Value</label>
+        <input
+          class="form-control"
+          id="value"
+          required
+          [(ngModel)]="investment.value"
+          name="value"
+        />
+      </div>
+
+      
+      
+
+      
+      <div class="form-group">
+        <label for="investorId">InvestorId</label>
+        <input
+          class="form-control"
+          id="investorId"
+          required
+          [(ngModel)]="investment.investorId"
+          name="investorId"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="investedDate">investedDate</label>
+        <input
+          class="form-control"
+          id="investedDate"
+          required
+          [(ngModel)]="investment.investedDate"
+          name="investedDate"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="maturity">maturity</label>
+        <input
+          class="form-control"
+          id="maturity"
+          required
+          [(ngModel)]="investment.maturity"
+          name="maturity"
+
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="expectedreturn">expectedreturn</label>
+        <input
+          class="form-control"
+          id="expectedreturn"
+          required
+          [(ngModel)]="investment.expectedreturn"
+          name="maturity"
+
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="interestRate">interestRate</label>
+        <input
+          class="form-control"
+          id="interestRate"
+          required
+          [(ngModel)]="investment.interestRate"
+          name="interestRate"
+
+        />
+      </div>
+
+
+
+
+
+      <button (click)="saveInvestment()" class="btn btn-success">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+      <h4>Investimento bem-sucedido!</h4>
+      <button class="btn btn-success" (click)="newInvestment()">Add</button>
+    </div>
+  </div>
+</div>
