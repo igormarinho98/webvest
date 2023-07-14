@@ -1,6 +1,12 @@
+<div class="card" style="width: 18rem;">
 <div *ngIf="viewMode; else editable">
+
     <div *ngIf="currentInvestment.id">
-        <h4>Investimento</h4>
+        <div class="card-body">
+        <h4 class="card-title">Investimento # {{currentInvestment.id}}</h4>
+        <h6 class="card-subtitle mb-2 text-muted">{{currentInvestment.investedDate}}</h6>
+
+
         <div>
             <label><strong>Titulo:</strong></label> {{ currentInvestment.type }}
         </div>
@@ -30,12 +36,7 @@
             {{ currentInvestment.expectedreturn }}
         </div>
 
-        
-        <div>
-            <label><strong>Data de Aplicação :</strong></label>
-            {{ currentInvestment.investedDate }}
-        </div>
-
+         
 
         <div>
             <label><strong>Resgate:</strong></label>
@@ -53,9 +54,10 @@
     </div>
 </div>
 
+</div>
 <ng-template #editable>
     <div *ngIf="currentInvestment.id" class="edit-form">
-        <h4>Tutorial</h4>
+        <h4>Investimento</h4>
         <form>
             <div class="form-group">
                 <label for="title">Title</label>
@@ -95,8 +97,11 @@
         <p>{{ message }}</p>
     </div>
 
+
     <div *ngIf="!currentInvestment.id">
         <br />
         <p>Cannot access this Investment...</p>
     </div>
 </ng-template>
+
+</div>
