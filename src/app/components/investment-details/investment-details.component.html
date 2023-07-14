@@ -1,102 +1,102 @@
 <div *ngIf="viewMode; else editable">
     <div *ngIf="currentInvestment.id">
-      <h4>Investimento</h4>
-      <div>
-        <label><strong>Titulo:</strong></label> {{ currentInvestment.type }}
-      </div>
-      <div>
-        <label><strong>Description:</strong></label>
-        {{ currentInvestment.description }}
-      </div>
-      <div>
-        <label><strong>Status:</strong></label>
-        {{ currentInvestment.active ? "Ativo" : "Resgatado" }}
-      </div>
-  
-      <a
-        class="badge badge-warning"
-        routerLink="/tutorials/{{ currentInvestment.id }}"
-      >
-        Edit
-      </a>
-    </div>
-  
-    <div *ngIf="!currentInvestment">
-      <br />
-      <p>Please click on a Tutorial...</p>
-    </div>
-  </div>
-  
-  <ng-template #editable>
-    <div *ngIf="currentInvestment.id" class="edit-form">
-      <h4>Tutorial</h4>
-      <form>
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input
-            type="text"
-            class="form-control"
-            id="title"
-            [(ngModel)]="currentInvestment.type"
-            name="title"
-          />
+        <h4>Investimento</h4>
+        <div>
+            <label><strong>Titulo:</strong></label> {{ currentInvestment.type }}
         </div>
-        <div class="form-group">
-          <label for="description">Description</label>
-          <input
-            type="text"
-            class="form-control"
-            id="description"
-            [(ngModel)]="currentInvestment.description"
-            name="description"
-          />
-        </div>
- 
-        <div class="form-group">
-            <label for="value">Valor</label>
-            <input
-              type="text"
-              class="form-control"
-              id="value"
-              [(ngModel)]="currentInvestment.value"
-              name="value"
-            />
-          </div>
+        <div>
+            <label><strong>Description:</strong></label>
+            {{ currentInvestment.description }}
 
-        <div class="form-group">
-          <label><strong>Status:</strong></label>
-          {{ currentInvestment.active ? "True" : "False" }}
         </div>
-      </form>
-  
-      <button
-        class="badge badge-primary mr-2"
-        *ngIf="currentInvestment.type"
-       >
-        UnPublish
-      </button>
-      <button
-        *ngIf="!currentInvestment.type"
-        class="badge badge-primary mr-2"
-       >
-        Publish
-      </button>
-  
-      <button class="badge badge-danger mr-2" >
-        Delete
-      </button>
-  
-      <button
-        type="submit"
-        class="badge badge-success mb-2"
-       >
-        Update
-      </button>
-      <p>{{ message }}</p>
+        <div>
+            <label><strong>Vencimento:</strong></label>
+            {{ currentInvestment.maturity }}
+        </div>
+
+        <div>
+            <label><strong>Taxa :</strong></label>
+            {{ currentInvestment.interestRate }}
+        </div>
+
+        <div>
+            <label><strong>Trader :</strong></label>
+            {{ currentInvestment.investorId }}
+        </div>
+
+
+        <div>
+            <label><strong>Retorno Esperado :</strong></label>
+            {{ currentInvestment.expectedreturn }}
+        </div>
+
+        
+        <div>
+            <label><strong>Data de Aplicação :</strong></label>
+            {{ currentInvestment.investedDate }}
+        </div>
+
+
+        <div>
+            <label><strong>Resgate:</strong></label>
+            {{ currentInvestment.active ? "Ativo" : "Resgatado" }}
+        </div>
+
+        <a class="badge badge-warning" routerLink="/tutorials/{{ currentInvestment.id }}">
+            Edit
+        </a>
     </div>
-  
+
+    <div *ngIf="!currentInvestment">
+        <br />
+        <p>Please click on a Investment...</p>
+    </div>
+</div>
+
+<ng-template #editable>
+    <div *ngIf="currentInvestment.id" class="edit-form">
+        <h4>Tutorial</h4>
+        <form>
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" id="title" [(ngModel)]="currentInvestment.type" name="title" />
+            </div>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <input type="text" class="form-control" id="description" [(ngModel)]="currentInvestment.description"
+                    name="description" />
+            </div>
+
+            <div class="form-group">
+                <label for="value">Valor</label>
+                <input type="text" class="form-control" id="value" [(ngModel)]="currentInvestment.value" name="value" />
+            </div>
+
+            <div class="form-group">
+                <label><strong>Status:</strong></label>
+                {{ currentInvestment.active ? "True" : "False" }}
+            </div>
+        </form>
+
+        <button class="badge badge-primary mr-2" *ngIf="currentInvestment.type">
+            UnPublish
+        </button>
+        <button *ngIf="!currentInvestment.type" class="badge badge-primary mr-2">
+            Publish
+        </button>
+
+        <button class="badge badge-danger mr-2">
+            Delete
+        </button>
+
+        <button type="submit" class="badge badge-success mb-2">
+            Update
+        </button>
+        <p>{{ message }}</p>
+    </div>
+
     <div *ngIf="!currentInvestment.id">
-      <br />
-      <p>Cannot access this Tutorial...</p>
+        <br />
+        <p>Cannot access this Investment...</p>
     </div>
-  </ng-template>
+</ng-template>
