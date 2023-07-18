@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Investment } from 'src/app/models/investment.model';
 import { InvestmentService } from 'src/app/services/investment.service';
  
-
 @Component({
   selector: 'app-investment-list',
   templateUrl: './investment-list.component.html',
@@ -15,12 +14,13 @@ export class InvestmentListComponent implements OnInit {
   currentIndex = -1 ;
   type = '';
   investorId = '';
-
+  myAngularxQrCode: any = '';
     constructor(private investmentService: InvestmentService) {}
 
 
     ngOnInit(): void{
       this.listInvestment();
+      this.myAngularxQrCode += this.investorId;
     }
 
 
@@ -62,3 +62,13 @@ export class InvestmentListComponent implements OnInit {
   }
   
 }
+
+export class QRCodeComponent {
+  public myAngularxQrCode: any;
+  constructor () {
+    // assign a value
+    
+    this.myAngularxQrCode = '';
+  }
+}
+  

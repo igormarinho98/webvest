@@ -22,7 +22,7 @@
 
         <div>
             <label><strong>Taxa :</strong></label>
-            {{ currentInvestment.interestRate }}
+            {{ currentInvestment.interestRate }}%
         </div>
 
         <div>
@@ -33,7 +33,7 @@
 
         <div>
             <label><strong>Retorno Esperado :</strong></label>
-            {{ currentInvestment.expectedreturn }}
+            R$ {{ currentInvestment.expectedreturn }}
         </div>
 
          
@@ -43,9 +43,8 @@
             {{ currentInvestment.active ? "Ativo" : "Resgatado" }}
         </div>
 
-        <a class="badge badge-warning" routerLink="/tutorials/{{ currentInvestment.id }}">
-            Edit
-        </a>
+
+       
     </div>
 
     <div *ngIf="!currentInvestment">

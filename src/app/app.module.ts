@@ -8,6 +8,11 @@ import { InvestmentDetailsComponent } from './components/investment-details/inve
 import { InvestmentListComponent } from './components/investment-list/investment-list.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SuitabilityComponent } from './components/suitability/suitability.component';
+import { AddInvestorComponent } from './components/add-investor/add-investor.component';
+import { InvestorDetailsComponent } from './components/investor-details/investor-details.component';
+import { InvestorListComponent } from './components/investor-list/investor-list.component';
+import { QRCodeModule } from 'angularx-qrcode';
 
 
 @NgModule({
@@ -15,13 +20,18 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     AddInvestmentComponent,
     InvestmentDetailsComponent,
-    InvestmentListComponent
+    InvestmentListComponent,
+    SuitabilityComponent,
+    AddInvestorComponent,
+    InvestorDetailsComponent,
+    InvestorListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    QRCodeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

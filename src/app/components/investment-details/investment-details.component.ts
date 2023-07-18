@@ -23,7 +23,10 @@ export class InvestmentDetailsComponent implements OnInit{
   maturity: 0,
   expectedreturn: 0,
   interestRate: 0,
+
+  
 }
+
 
 message = '';
 
@@ -38,7 +41,7 @@ message = '';
       if (!this.viewMode) {
         this.message = '';
         this.getInvestment(this.route.snapshot.params["id"]);
-      }
+        }
   }
 
     
@@ -53,4 +56,9 @@ message = '';
     });
   }
 
+
+  
+  
 }
+
+
