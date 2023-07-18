@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'add', component: AddInvestmentComponent },
   { path: 'investor-add', component: AddInvestorComponent },
   { path: 'investors', component: InvestorListComponent },
-
+ 
 ];
 
 @NgModule({

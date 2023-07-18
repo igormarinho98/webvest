@@ -1,1 +1,98 @@
-<p>investor-details works!</p>
+<div class="card" style="width: 18rem;">
+    <div *ngIf="viewMode; else editable">
+    
+        <div *ngIf="currentInvestor.id">
+            <div class="card-body">
+            <h4 class="card-title">Investidor # {{currentInvestor.id}}</h4>
+            <h6 class="card-subtitle mb-2 text-muted">{{currentInvestor.lastName}}</h6>
+    
+    
+            <div>
+                <label><strong>Nome:</strong></label> {{ currentInvestor.firstName }}
+            </div>
+            <div>
+                <label><strong>Sobrenome:</strong></label>
+                {{ currentInvestor.lastName }}
+    
+            </div>
+            <div>
+                <label><strong>Email:</strong></label>
+                {{ currentInvestor.email }}
+            </div>
+    
+            <div>
+                <label><strong>Cidade :</strong></label>
+                {{ currentInvestor.city }}%
+            </div>
+    
+            <div>
+                <label><strong>Estado :</strong></label>
+                {{ currentInvestor.state }}
+            </div>
+    
+    
+            <div>
+                <label><strong>CEP :</strong></label>
+                R$ {{ currentInvestor.zipCode }}
+            </div>
+    
+            <div>
+                <label><strong>Telefone :</strong></label>
+                R$ {{ currentInvestor.phoneNumber }}
+            </div>
+    
+             
+    
+           
+    
+    
+           
+        </div>
+    
+        <div *ngIf="!currentInvestor">
+            <br />
+            <p>Please click on a Investment...</p>
+        </div>
+    </div>
+    
+    </div>
+    <ng-template #editable>
+        <div *ngIf="currentInvestor.id" class="edit-form">
+            <h4>Investimento</h4>
+            <form>
+                <div class="form-group">
+                    <label for="title">Email</label>
+                    <input type="text" class="form-control" id="email" [(ngModel)]="currentInvestor.email" name="email" />
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">phoneNumber</label>
+                    <input type="text" class="form-control" id="phoneNumber" [(ngModel)]="currentInvestor.phoneNumber"
+                        name="phoneNumber" />
+                </div>
+     
+    
+              
+            </form>
+    
+          
+        
+    
+            <button class="badge badge-danger mr-2">
+                Delete
+            </button>
+    
+            <button type="submit" class="badge badge-success mb-2">
+                Update
+            </button>
+            <p>{{ message }}</p>
+        </div>
+    
+    
+        <div *ngIf="!currentInvestor.id">
+            <br />
+            <p>Cannot access this Investor...</p>
+        </div>
+    </ng-template>
+    
+    </div>
+    
