@@ -14,14 +14,13 @@ export class InvestmentListComponent implements OnInit {
   currentIndex = -1 ;
   type = '';
   investorId = '';
-  myAngularxQrCode: any = '';
-    constructor(private investmentService: InvestmentService) {}
+     constructor(private investmentService: InvestmentService) {}
 
+ 
 
     ngOnInit(): void{
       this.listInvestment();
-      this.myAngularxQrCode += this.investorId;
-    }
+     }
 
 
 
@@ -42,12 +41,12 @@ export class InvestmentListComponent implements OnInit {
     }
 
     
-  setActiveTutorial(investment: Investment, index: number): void {
+  setActiveInvestment(investment: Investment, index: number): void {
     this.currentInvestment = investment;
     this.currentIndex = index;
   }
 
-  searchTitle(): void {
+  searchInvestment(): void {
     this.currentInvestment = {};
     this.currentIndex = -1;
 
@@ -60,15 +59,7 @@ export class InvestmentListComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
+ 
   
 }
-
-export class QRCodeComponent {
-  public myAngularxQrCode: any;
-  constructor () {
-    // assign a value
-    
-    this.myAngularxQrCode = '';
-  }
-}
-  
+ 

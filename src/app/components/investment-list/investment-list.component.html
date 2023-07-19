@@ -13,7 +13,7 @@
           <button
             class="btn btn-outline-secondary"
             type="button"
-            (click)="searchTitle()"
+            (click)="searchInvestment()"
           >
             Search
           </button>
@@ -27,11 +27,10 @@
           class="list-group-item"
           *ngFor="let investment of investments; let i = index"
           [class.active]="i == currentIndex"
-          (click)="setActiveTutorial(investment, i)"
+          (click)="setActiveInvestment(investment, i)"
         >
           <p>Titulo:  {{ investment.type }}</p>  
   
-          <qrcode [qrdata]="'Your data string'" [width]="256" [errorCorrectionLevel]="'M'"></qrcode>
 
             <h1>
               R$  {{ investment.value }}

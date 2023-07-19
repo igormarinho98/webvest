@@ -23,12 +23,28 @@
           [class.active]="i == currentIndex"
           (click)="setActiveInvestor(investor, i)"
         >
-          <p>Nome:  {{ investor.firstName }}</p>  
+        
   
  
-            <h1>
-              {{ investor.lastName }}
-            </h1> 
+            <h6>
+              Nome:  {{ investor.firstName }}    {{ investor.lastName }}
+            </h6> 
+
+           <div *ngIf="investor.suitability == 302">
+             Suitability: Conservador
+            <p class="card-subtitle mb-2 text-muted">O investidor de perfil conservador preza pela segurança em primeiro lugar. Por conta disso, ele prefere recorrer a investimentos com essa característica, ainda que estes tenham uma baixa rentabilidade.</p> 
+            </div>
+
+            <div *ngIf="investor.suitability == 304">
+              Suitability: Arrojado
+
+              Os investidores de perfil arrojado – também chamados de agressivos – estão no outro extremo em relação aos conservadores. ,
+             </div>
+
+             <div *ngIf="investor.suitability == 305">
+              Suitability: Moderado
+            <p class="card-subtitle mb-2 text-muted">Entre os investidores conservadores e arrojados há um meio termo: o perfil moderado. Ele apresenta um equilíbrio entre o risco e a busca por melhor rendimento.</p>  
+             </div>
             
         </li>
       </ul>
@@ -40,7 +56,10 @@
         [viewMode]="true"
         [currentInvestor]="currentInvestor"
       ></app-investor-details>
- 
-    </div>
+
+      
+    </div>    
+    
+    
   </div>
 

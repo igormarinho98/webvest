@@ -11,6 +11,7 @@ export class Investor {
     lastName?: string;
     zipCode?: string;
     phoneNumber?: string;
+    suitability?: number;
     
 
 
