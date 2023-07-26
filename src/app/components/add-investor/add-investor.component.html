@@ -1,9 +1,17 @@
-<div class="myForm container">
 
-
+<div class="myForm">
+  
+  <div class="card">
+    
     <h1 class="text-h1">Novo Investidor</h1>
- 
-<div class="submit-form">
+    
+    <div class="img-add">
+      
+      <img src="assets/fot2.jpg" alt="Image">
+    </div>
+     
+     
+     <div class="submit-form">
     <div *ngIf="!submitted">
       <div class="form-group">
         <label for="firstName">Nome</label>
@@ -20,39 +28,39 @@
       <div class="form-group">
         <label for="lastName">Sobrenome</label>
         <input
-          class="form-control"
+        class="form-control"
           id="lastName"
           required
           [(ngModel)]="investor.lastName"
           name="lastName"
         />
       </div>
-
-
+      
+      
       <div class="form-group">
         <label for="cpf">CPF</label>
         <input
-          class="form-control"
-          id="cpf"
-          required
-          [(ngModel)]="investor.cpf"
-          name="cpf"
+        class="form-control"
+        id="cpf"
+        required
+        [(ngModel)]="investor.cpf"
+        name="cpf"
         />
       </div>
 
-
+      
 
       <div class="form-group">
         <label for="email">Email</label>
         <input
-          class="form-control"
-          id="email"
-          required
-          [(ngModel)]="investor.email"
-          name="email"
+        class="form-control"
+        id="email"
+        required
+        [(ngModel)]="investor.email"
+        name="email"
         />
       </div>
-
+      
       
       
 
@@ -65,12 +73,12 @@
           required
           [(ngModel)]="investor.address"
           name="address"
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="city">Cidade</label>
-        <input
+          />
+        </div>
+        
+        <div class="form-group">
+          <label for="city">Cidade</label>
+          <input
           class="form-control"
           id="city"
           required
@@ -78,22 +86,22 @@
           name="city"
         />
       </div>
-
+      
       <div class="form-group">
         <label for="state">Estado</label>
         <input
-          class="form-control"
-          id="state"
-          required
+        class="form-control"
+        id="state"
+        required
           [(ngModel)]="investor.state"
           name="state"
-
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="password">Senha</label>
-        <input
+          
+          />
+        </div>
+        
+        <div class="form-group">
+          <label for="password">Senha</label>
+          <input
           class="form-control"
           id="password"
           required
@@ -101,26 +109,26 @@
           name="password"
           type="password"
 
-        />
-      </div>
-
-      <div class="form-group">
-        <label for="zipCode">CEP</label>
+          />
+        </div>
+        
+        <div class="form-group">
+          <label for="zipCode">CEP</label>
         <input
-          class="form-control"
-          id="zipCode"
-          required
-          [(ngModel)]="investor.zipCode"
-          name="zipCode"
-
+        class="form-control"
+        id="zipCode"
+        required
+        [(ngModel)]="investor.zipCode"
+        name="zipCode"
+        
         />
       </div>
-
-
+      
+      
       <div class="form-group">
         <label for="phoneNumber">Telefone</label>
         <input
-          class="form-control"
+        class="form-control"
           id="phoneNumber"
           required
           [(ngModel)]="investor.phoneNumber"
@@ -128,7 +136,7 @@
 
         />
       </div>
-
+      
       <div class="form-group">
         <label for="birthday">Data de Nascimento</label>
         <input
@@ -137,17 +145,31 @@
           required
           [(ngModel)]="investor.birthday"
           name="birthday"
+          
+          />
+        </div>
 
+        
+        <div class="form-group">
+          <label for="suitability">Suitability</label>
+        <input
+          class="form-control"
+          id="suitability"
+          required
+          [(ngModel)]="investor.suitability"
+          name="suitability"
+          
         />
       </div>
-
-
+      
+      
       <button (click)="saveInvestor()" class="btn btn-success">Submit</button>
     </div>
-
+    
     <div *ngIf="submitted">
       <h4>Investimento bem-sucedido!</h4>
       <button class="btn btn-success" (click)="newInvestor()">Add</button>
     </div>
   </div>
+</div>
 </div>

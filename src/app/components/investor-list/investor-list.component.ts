@@ -36,12 +36,13 @@ export class InvestorListComponent implements OnInit {
     this.currentInvestor = {};
     this.currentIndex = -1;
   }
-
   
 setActiveInvestor(investor: Investor, index: number): void {
   this.currentInvestor = investor;
   this.currentIndex = index;
 }
+ 
+
 
  
 

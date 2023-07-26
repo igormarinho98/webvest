@@ -30,20 +30,27 @@
               Nome:  {{ investor.firstName }}    {{ investor.lastName }}
             </h6> 
 
-           <div *ngIf="investor.suitability == 302">
-             Suitability: Conservador
-            <p class="card-subtitle mb-2 text-muted">O investidor de perfil conservador preza pela segurança em primeiro lugar. Por conta disso, ele prefere recorrer a investimentos com essa característica, ainda que estes tenham uma baixa rentabilidade.</p> 
+           <div *ngIf="investor.suitability == '302'">
+            <span class="badge text-bg-primary">Suitability: Conservador</span>
+
+               
+              
+            <p class="card-subtitle mb-2">O investidor de perfil conservador preza pela segurança em primeiro lugar. Por conta disso, ele prefere recorrer a investimentos com essa característica, ainda que estes tenham uma baixa rentabilidade.</p> 
             </div>
 
-            <div *ngIf="investor.suitability == 304">
-              Suitability: Arrojado
+            <div *ngIf="investor.suitability == '304'">
+              <span class="badge text-bg-warning">Suitability: Arrojado</span>
+              
 
+             <p class="card-subtitle mb-2">
+              
               Os investidores de perfil arrojado – também chamados de agressivos – estão no outro extremo em relação aos conservadores. ,
+             </p> 
              </div>
 
-             <div *ngIf="investor.suitability == 305">
-              Suitability: Moderado
-            <p class="card-subtitle mb-2 text-muted">Entre os investidores conservadores e arrojados há um meio termo: o perfil moderado. Ele apresenta um equilíbrio entre o risco e a busca por melhor rendimento.</p>  
+             <div *ngIf="investor.suitability == '305'">
+              <span class="badge text-bg-info">Suitability: Moderado</span>
+             <p class="card-subtitle mb-2 ">Entre os investidores conservadores e arrojados há um meio termo: o perfil moderado. Ele apresenta um equilíbrio entre o risco e a busca por melhor rendimento.</p>  
              </div>
             
         </li>
@@ -59,7 +66,7 @@
 
       
     </div>    
-    
+  
     
   </div>
-
+ 

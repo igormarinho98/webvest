@@ -13,10 +13,14 @@
           <button
             class="btn btn-outline-secondary"
             type="button"
+            method="GET"
             (click)="searchInvestment()"
           >
             Search
           </button>
+          <button class="btn btn-info" >
+          <a href="http://localhost:8080/api/invest/export">  Export
+          </a></button>
         </div>
       </div>
     </div>
@@ -46,6 +50,7 @@
       [viewMode]="true"
       [currentInvestment]="currentInvestment"
     ></app-investment-details>
+
 
     </div>
   </div>

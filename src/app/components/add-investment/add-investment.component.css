@@ -1,15 +1,29 @@
 .submit-form {
     max-width: 20em;
     font-color: white;
+    padding: 1em;
+    background-color: #f2f2f2;
     
 }
 .myForm {
-    background-color: #646464;
 
     margin-top: 2.5em;
-    
+
 }
 
 .text-h1{
     color: white;
+}
+
+.img-add {
+    width: 0.7em;
+    height: 0.7em;
+
+}
+
+
+
+.img-add hover {
+    width: 0.4em;
+    height: 0.4em;
 }

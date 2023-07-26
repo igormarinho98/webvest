@@ -1,3 +1,4 @@
+import { trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Investment } from 'src/app/models/investment.model';
 import { InvestmentService } from 'src/app/services/investment.service';
@@ -59,7 +60,7 @@ export class InvestmentListComponent implements OnInit {
         error: (e) => console.error(e)
       });
   }
- 
+
   
-}
- 
+  
+} 

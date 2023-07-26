@@ -2,11 +2,18 @@
 
 
     <h1 class="text-h1">Novo Investimento</h1>
- 
+ <div class="card">
+  
+  <div class="img-add">
+    <img src="assets/fot3.jpg" alt="Image">
+
+  </div>
+
+  <div class="card">
 <div class="submit-form">
     <div *ngIf="!submitted">
       <div class="form-group">
-        <label for="type">Type</label>
+        <label for="type">Título</label>
         <input
           type="text"
           class="form-control"
@@ -18,7 +25,7 @@
       </div>
       
       <div class="form-group">
-        <label for="description">Description</label>
+        <label for="description">Descrição</label>
         <input
           class="form-control"
           id="description"
@@ -43,7 +50,7 @@
 
 
       <div class="form-group">
-        <label for="value">Value</label>
+        <label for="value">Valor do Investimento</label>
         <input
           class="form-control"
           id="value"
@@ -58,7 +65,7 @@
 
       
       <div class="form-group">
-        <label for="investorId">InvestorId</label>
+        <label for="investorId">Investidor</label>
         <input
           class="form-control"
           id="investorId"
@@ -69,7 +76,7 @@
       </div>
 
       <div class="form-group">
-        <label for="investedDate">investedDate</label>
+        <label for="investedDate">Data de Emissão</label>
         <input
           class="form-control"
           id="investedDate"
@@ -80,7 +87,7 @@
       </div>
 
       <div class="form-group">
-        <label for="maturity">maturity</label>
+        <label for="maturity">Vencimento</label>
         <input
           class="form-control"
           id="maturity"
@@ -92,7 +99,7 @@
       </div>
 
       <div class="form-group">
-        <label for="expectedreturn">expectedreturn</label>
+        <label for="expectedreturn">Retorno Esperado</label>
         <input
           class="form-control"
           id="expectedreturn"
@@ -104,7 +111,7 @@
       </div>
 
       <div class="form-group">
-        <label for="interestRate">interestRate</label>
+        <label for="interestRate">Taxa Desejada</label>
         <input
           class="form-control"
           id="interestRate"
@@ -127,4 +134,7 @@
       <button class="btn btn-success" (click)="newInvestment()">Add</button>
     </div>
   </div>
+
+</div>
+</div>
 </div>
